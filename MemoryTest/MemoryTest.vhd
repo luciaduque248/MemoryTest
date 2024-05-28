@@ -4,11 +4,14 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity MemoryTest is
     Port (
+		  --entradas--
         clock : in std_logic;
         reset : in std_logic;
         address : in std_logic_vector(7 downto 0);
         data_in : in std_logic_vector(7 downto 0);
         write_memory : in std_logic;
+		  
+		  --salidas--
         port_out_00 : out std_logic_vector(7 downto 0);
         port_out_01 : out std_logic_vector(7 downto 0);
         display7segu3 : out std_logic_vector(6 downto 0);
