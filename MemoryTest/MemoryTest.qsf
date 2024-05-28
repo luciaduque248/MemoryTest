@@ -49,8 +49,8 @@ set_global_assignment -name DEVICE_FILTER_PIN_COUNT 484
 set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 6
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
 set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
-set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
-set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
@@ -63,15 +63,16 @@ set_global_assignment -name VHDL_FILE MemoryTest.vhd
 set_global_assignment -name VHDL_FILE ../rw_96x8_sync/rw_96x8_sync.vhd
 set_global_assignment -name VHDL_FILE ../rom_128x8_sync/rom_128x8_sync.vhd
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
-set_location_assignment PIN_V6 -to address[0]
-set_location_assignment PIN_Y7 -to address[1]
-set_location_assignment PIN_U9 -to address[2]
-set_location_assignment PIN_U10 -to address[3]
-set_location_assignment PIN_V7 -to address[4]
-set_location_assignment PIN_U8 -to address[5]
-set_location_assignment PIN_T9 -to address[6]
-set_location_assignment PIN_T10 -to address[7]
+set_location_assignment PIN_E3 -to address[0]
+set_location_assignment PIN_H7 -to address[1]
+set_location_assignment PIN_J7 -to address[2]
+set_location_assignment PIN_G5 -to address[3]
+set_location_assignment PIN_G4 -to address[4]
+set_location_assignment PIN_H6 -to address[5]
+set_location_assignment PIN_H5 -to address[6]
+set_location_assignment PIN_J6 -to address[7]
 set_location_assignment PIN_G21 -to clock
+set_location_assignment PIN_F1 -to reset
 set_location_assignment PIN_E11 -to display7segu0[6]
 set_location_assignment PIN_F11 -to display7segu0[5]
 set_location_assignment PIN_H12 -to display7segu0[4]
@@ -100,5 +101,16 @@ set_location_assignment PIN_B19 -to display7segu3[3]
 set_location_assignment PIN_C19 -to display7segu3[2]
 set_location_assignment PIN_D19 -to display7segu3[1]
 set_location_assignment PIN_G15 -to display7segu3[0]
-set_location_assignment PIN_H2 -to reset
+set_location_assignment PIN_V6 -to data_in[0]
+set_location_assignment PIN_Y7 -to data_in[1]
+set_location_assignment PIN_U9 -to data_in[2]
+set_location_assignment PIN_U10 -to data_in[3]
+set_location_assignment PIN_V7 -to data_in[4]
+set_location_assignment PIN_U8 -to data_in[5]
+set_location_assignment PIN_T9 -to data_in[6]
+set_location_assignment PIN_T10 -to data_in[7]
+set_location_assignment PIN_D2 -to write_memory
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform.vwf
+set_global_assignment -name EDA_NETLIST_WRITER_OUTPUT_DIR "C:/Users/ASUS/Desktop/MicrocontroladorFina/Microcontrolador/MemoryTest/simulation/qsim/" -section_id eda_simulation
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST ON -section_id eda_simulation
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MemoryTest
-Thu May 23 17:47:07 2024
+Tue May 28 16:13:47 2024
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -44,7 +44,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu May 23 17:47:07 2024      ;
+; Analysis & Synthesis Status        ; Successful - Tue May 28 16:13:47 2024      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; MemoryTest                                 ;
 ; Top-level Entity Name              ; MemoryTest                                 ;
@@ -153,31 +153,31 @@ applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 10          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 4           ;
+; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ; < 0.1%      ;
-;     Processors 5-8         ;   0.0%      ;
+;     Processors 2-6         ; < 0.1%      ;
+;     Processors 7-12        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                               ;
-+--------------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path     ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                    ; Library ;
-+--------------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------+---------+
-; ../output_ports/outputPorts.vhd      ; yes             ; User VHDL File  ; C:/Users/DELL/Documents/VHDL/Microcontrolador/output_ports/outputPorts.vhd      ;         ;
-; ../memory/memory.vhd                 ; yes             ; User VHDL File  ; C:/Users/DELL/Documents/VHDL/Microcontrolador/memory/memory.vhd                 ;         ;
-; ../display7segmentos/display7seg.vhd ; yes             ; User VHDL File  ; C:/Users/DELL/Documents/VHDL/Microcontrolador/display7segmentos/display7seg.vhd ;         ;
-; MemoryTest.vhd                       ; yes             ; User VHDL File  ; C:/Users/DELL/Documents/VHDL/Microcontrolador/MemoryTest/MemoryTest.vhd         ;         ;
-; ../rw_96x8_sync/rw_96x8_sync.vhd     ; yes             ; User VHDL File  ; C:/Users/DELL/Documents/VHDL/Microcontrolador/rw_96x8_sync/rw_96x8_sync.vhd     ;         ;
-; ../rom_128x8_sync/rom_128x8_sync.vhd ; yes             ; User VHDL File  ; C:/Users/DELL/Documents/VHDL/Microcontrolador/rom_128x8_sync/rom_128x8_sync.vhd ;         ;
-+--------------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                             ;
++--------------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path     ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                  ; Library ;
++--------------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------+---------+
+; ../output_ports/outputPorts.vhd      ; yes             ; User VHDL File  ; C:/Users/ASUS/Desktop/MicrocontroladorFina/Microcontrolador/output_ports/outputPorts.vhd      ;         ;
+; ../memory/memory.vhd                 ; yes             ; User VHDL File  ; C:/Users/ASUS/Desktop/MicrocontroladorFina/Microcontrolador/memory/memory.vhd                 ;         ;
+; ../display7segmentos/display7seg.vhd ; yes             ; User VHDL File  ; C:/Users/ASUS/Desktop/MicrocontroladorFina/Microcontrolador/display7segmentos/display7seg.vhd ;         ;
+; MemoryTest.vhd                       ; yes             ; User VHDL File  ; C:/Users/ASUS/Desktop/MicrocontroladorFina/Microcontrolador/MemoryTest/MemoryTest.vhd         ;         ;
+; ../rw_96x8_sync/rw_96x8_sync.vhd     ; yes             ; User VHDL File  ; C:/Users/ASUS/Desktop/MicrocontroladorFina/Microcontrolador/rw_96x8_sync/rw_96x8_sync.vhd     ;         ;
+; ../rom_128x8_sync/rom_128x8_sync.vhd ; yes             ; User VHDL File  ; C:/Users/ASUS/Desktop/MicrocontroladorFina/Microcontrolador/rom_128x8_sync/rom_128x8_sync.vhd ;         ;
++--------------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -277,7 +277,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:04     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -287,25 +287,25 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Thu May 23 17:47:00 2024
+    Info: Processing started: Tue May 28 16:13:42 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MemoryTest -c MemoryTest
-Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
-Info (12021): Found 2 design units, including 1 entities, in source file /users/dell/documents/vhdl/microcontrolador/output_ports/outputports.vhd
+Info (11104): Parallel Compilation has detected 12 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 10 of the 10 physical processors detected instead.
+Info (12021): Found 2 design units, including 1 entities, in source file /users/asus/desktop/microcontroladorfina/microcontrolador/output_ports/outputports.vhd
     Info (12022): Found design unit 1: outputPorts-outputPorts_arch
     Info (12023): Found entity 1: outputPorts
-Info (12021): Found 2 design units, including 1 entities, in source file /users/dell/documents/vhdl/microcontrolador/memory/memory.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/asus/desktop/microcontroladorfina/microcontrolador/memory/memory.vhd
     Info (12022): Found design unit 1: memory-memory_arch
     Info (12023): Found entity 1: memory
-Info (12021): Found 2 design units, including 1 entities, in source file /users/dell/documents/vhdl/microcontrolador/display7segmentos/display7seg.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/asus/desktop/microcontroladorfina/microcontrolador/display7segmentos/display7seg.vhd
     Info (12022): Found design unit 1: display7seg-Behavioral
     Info (12023): Found entity 1: display7seg
 Info (12021): Found 2 design units, including 1 entities, in source file memorytest.vhd
     Info (12022): Found design unit 1: MemoryTest-Behavioral
     Info (12023): Found entity 1: MemoryTest
-Info (12021): Found 2 design units, including 1 entities, in source file /users/dell/documents/vhdl/microcontrolador/rw_96x8_sync/rw_96x8_sync.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/asus/desktop/microcontroladorfina/microcontrolador/rw_96x8_sync/rw_96x8_sync.vhd
     Info (12022): Found design unit 1: rw_96x8_sync-rw_96x8_sync_arch
     Info (12023): Found entity 1: rw_96x8_sync
-Info (12021): Found 2 design units, including 1 entities, in source file /users/dell/documents/vhdl/microcontrolador/rom_128x8_sync/rom_128x8_sync.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/asus/desktop/microcontroladorfina/microcontrolador/rom_128x8_sync/rom_128x8_sync.vhd
     Info (12022): Found design unit 1: rom_128x8_sync-rom_128x8_sync_arch
     Info (12023): Found entity 1: rom_128x8_sync
 Info (12127): Elaborating entity "MemoryTest" for the top level hierarchy
@@ -324,9 +324,9 @@ Info (21057): Implemented 3828 device resources after synthesis - the final reso
     Info (21059): Implemented 44 output pins
     Info (21061): Implemented 3765 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4691 megabytes
-    Info: Processing ended: Thu May 23 17:47:07 2024
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:04
+    Info: Peak virtual memory: 4722 megabytes
+    Info: Processing ended: Tue May 28 16:13:47 2024
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:01
 
 

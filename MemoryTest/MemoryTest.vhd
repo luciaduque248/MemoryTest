@@ -13,8 +13,8 @@ entity MemoryTest is
         port_out_01 : out std_logic_vector(7 downto 0);
         display7segu3 : out std_logic_vector(6 downto 0);
         display7segu2 : out std_logic_vector(6 downto 0);
-        display7segu1 : out std_logic_vector(6 downto 0); -- Nuevo display para address bits 7-4
-        display7segu0 : out std_logic_vector(6 downto 0)  -- Nuevo display para address bits 3-0
+        display7segu1 : out std_logic_vector(6 downto 0); 
+        display7segu0 : out std_logic_vector(6 downto 0)  
     );
 end MemoryTest;
 
@@ -36,19 +36,18 @@ architecture Behavioral of MemoryTest is
 
     component display7seg
         Port (
-            num : in unsigned(3 downto 0);       -- Entrada numérica (0-9)
-            segments : out std_logic_vector(6 downto 0)  -- Salida de los segmentos (a-g)
+            num : in unsigned(3 downto 0);      
+            segments : out std_logic_vector(6 downto 0)  
         );
     end component;
 
     signal data_out_memory : std_logic_vector(7 downto 0);
     signal segments_display_00 : std_logic_vector(6 downto 0);
     signal segments_display_01 : std_logic_vector(6 downto 0);
-    signal segments_display_10 : std_logic_vector(6 downto 0); -- Segmentos para el address bits 7-4
-    signal segments_display_11 : std_logic_vector(6 downto 0); -- Segmentos para el address bits 3-0
+    signal segments_display_10 : std_logic_vector(6 downto 0); 
+    signal segments_display_11 : std_logic_vector(6 downto 0); 
 
 begin
-    -- Instancia de la memoria
     U1: memory
         port map (
             clock => clock,
@@ -59,43 +58,43 @@ begin
             data_out => data_out_memory,
             port_out_00 => port_out_00,
             port_out_01 => port_out_01,
-            port_in_00 => (others => '0'), -- Puedes ajustar estos valores de entrada según sea necesario
-            port_in_01 => (others => '0')  -- Puedes ajustar estos valores de entrada según sea necesario
+            port_in_00 => (others => '0'), 
+            port_in_01 => (others => '0')  
         );
 
     -- Instancia del primer display de 7 segmentos para los bits 7 a 4 del data_out_memory
     U2: display7seg
         port map (
-            num => unsigned(data_out_memory(7 downto 4)), -- Mostrar bits 7 a 4 de la salida de la memoria
+            num => unsigned(data_out_memory(7 downto 4)),
             segments => segments_display_00
         );
 
-    -- Instancia del segundo display de 7 segmentos para los bits 3 a 0 del data_out_memory
+    -- Segundo display de 7 segmentos para los bits 3 a 0 del data_out_memory
     U3: display7seg
         port map (
-            num => unsigned(data_out_memory(3 downto 0)), -- Mostrar bits 3 a 0 de la salida de la memoria
+            num => unsigned(data_out_memory(3 downto 0)), 
             segments => segments_display_01
         );
 
-    -- Instancia del tercer display de 7 segmentos para los bits 7 a 4 del address
+    -- Tercer display de 7 segmentos para los bits 7 a 4 del address
     U4: display7seg
         port map (
-            num => unsigned(address(7 downto 4)), -- Mostrar bits 7 a 4 de la dirección
+            num => unsigned(address(7 downto 4)), 
             segments => segments_display_10
         );
 
-    -- Instancia del cuarto display de 7 segmentos para los bits 3 a 0 del address
+    -- Cuarto display de 7 segmentos para los bits 3 a 0 del address
     U5: display7seg
         port map (
-            num => unsigned(address(3 downto 0)), -- Mostrar bits 3 a 0 de la dirección
+            num => unsigned(address(3 downto 0)), -- 
             segments => segments_display_11
         );
 
-    -- Asignación de las señales de los segmentos a los puertos de salida
+    -- Asignación señale puertos de salidas
     display7segu2 <= segments_display_01;
     display7segu3 <= segments_display_00;
-    display7segu0 <= segments_display_11; -- Asignar los segmentos del address bits 3-0 al puerto display7segu0
-    display7segu1 <= segments_display_10; -- Asignar los segmentos del address bits 7-4 al puerto display7segu1
+    display7segu0 <= segments_display_11; 
+    display7segu1 <= segments_display_10; 
 
 end Behavioral;
 
