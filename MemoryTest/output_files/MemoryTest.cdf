@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP3C16F484) Path("C:/Users/ASUS/Desktop/MicrocontroladorFina/Microcontrolador/MemoryTest/output_files/") File("MemoryTest.sof") MfrSpec(OpMask(1));
+		Device PartName(EP3C16F484) Path("C:/Users/DELL/Documents/VHDL/Microcontrolador/MemoryTest/output_files/") File("MemoryTest.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

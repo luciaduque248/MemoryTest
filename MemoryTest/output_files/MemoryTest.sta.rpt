@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for MemoryTest
-Tue May 28 16:14:04 2024
+Tue May 28 16:34:13 2024
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -115,16 +115,16 @@ applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 10          ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 10          ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-10        ; < 0.1%      ;
-;     Processors 11-12       ;   0.0%      ;
+;     Processors 2-4         ; < 0.1%      ;
+;     Processors 5-8         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -1705,8 +1705,8 @@ No paths to report.
 ; -2.001 ; memory:U1|rw_96x8_sync:U2|RW~1775 ; memory:U1|rw_96x8_sync:U2|data_out[6] ; clock        ; clock       ; 1.000        ; 0.152      ; 3.140      ;
 ; -2.000 ; memory:U1|rw_96x8_sync:U2|RW~1766 ; memory:U1|rw_96x8_sync:U2|data_out[5] ; clock        ; clock       ; 1.000        ; 0.144      ; 3.131      ;
 ; -2.000 ; memory:U1|rw_96x8_sync:U2|RW~1822 ; memory:U1|rw_96x8_sync:U2|data_out[5] ; clock        ; clock       ; 1.000        ; 0.155      ; 3.142      ;
-; -1.999 ; memory:U1|rw_96x8_sync:U2|RW~1729 ; memory:U1|rw_96x8_sync:U2|data_out[0] ; clock        ; clock       ; 1.000        ; 0.136      ; 3.122      ;
 ; -1.999 ; memory:U1|rw_96x8_sync:U2|RW~109  ; memory:U1|rw_96x8_sync:U2|data_out[4] ; clock        ; clock       ; 1.000        ; 0.156      ; 3.142      ;
+; -1.999 ; memory:U1|rw_96x8_sync:U2|RW~1729 ; memory:U1|rw_96x8_sync:U2|data_out[0] ; clock        ; clock       ; 1.000        ; 0.136      ; 3.122      ;
 ; -1.999 ; memory:U1|rw_96x8_sync:U2|RW~1716 ; memory:U1|rw_96x8_sync:U2|data_out[3] ; clock        ; clock       ; 1.000        ; 0.142      ; 3.128      ;
 ; -1.999 ; memory:U1|rw_96x8_sync:U2|RW~518  ; memory:U1|rw_96x8_sync:U2|data_out[5] ; clock        ; clock       ; 1.000        ; 0.148      ; 3.134      ;
 ; -1.997 ; memory:U1|rw_96x8_sync:U2|RW~1108 ; memory:U1|rw_96x8_sync:U2|data_out[3] ; clock        ; clock       ; 1.000        ; 0.143      ; 3.127      ;
@@ -2926,10 +2926,10 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Tue May 28 16:14:02 2024
+    Info: Processing started: Tue May 28 16:34:10 2024
 Info: Command: quartus_sta MemoryTest -c MemoryTest
 Info: qsta_default_script.tcl version: #1
-Info (11104): Parallel Compilation has detected 12 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 10 of the 10 physical processors detected instead.
+Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (21077): Core supply voltage is 1.2V
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
@@ -2998,9 +2998,9 @@ Info (332146): Worst-case minimum pulse width slack is -3.000
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4785 megabytes
-    Info: Processing ended: Tue May 28 16:14:04 2024
-    Info: Elapsed time: 00:00:02
+    Info: Peak virtual memory: 4714 megabytes
+    Info: Processing ended: Tue May 28 16:34:13 2024
+    Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:01
 
 
